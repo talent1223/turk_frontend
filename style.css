@@ -1,0 +1,48 @@
+.content {
+  display: flex;
+}
+
+.left_div {
+  flex: 60%;
+}
+
+.right_div {
+  background-color: #cccccc;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.form_row{
+    display: flex;
+    height: 22px;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+.label_font{
+    font-size: 13px;
+    width: 120px;
+    height: 100%;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form_input{
+    border-radius: 5px;
+    width: 200px;
+    font-size: 12px;
+}
+
+.form{
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 2px;
+}
+
+.ship_form{
+    font-size: 14px;
+    font-weight: bold;
+}
