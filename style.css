@@ -15,7 +15,7 @@ img {
 }
 
 .right_div {
-  background-color: #cccccc;
+  background-color: #FFF8DC;
 }
 
 .image {
@@ -25,13 +25,13 @@ img {
 
 .form_row {
   display: flex;
-  height: 22px;
+  height: 26px;
   justify-content: center;
   margin-top: 3px;
 }
 
 .label_font {
-  font-size: 13px;
+  font-size: 14px;
   width: 120px;
   height: 100%;
   text-align: right;
@@ -39,7 +39,7 @@ img {
 }
 
 .flat_form_label {
-  font-size: 13px;
+  font-size: 14px;
   width: 100%;
   height: 100%;
   text-align: right;
@@ -49,13 +49,19 @@ img {
 .form_input {
   border-radius: 5px;
   width: 200px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .weight_form_input {
   border-radius: 5px;
   width: 80px;
-  font-size: 12px;
+  font-size: 14px;
+}
+
+.dimension_form_input {
+  border-radius: 5px;
+  width: 70px;
+  font-size: 14px;
 }
 
 .weight_form_item{
@@ -64,8 +70,17 @@ img {
 
 .form {
   border-radius: 5px;
-  border: 1px solid gray;
+  border: 1px solid #FFF8DC;
   padding: 2px;
+  margin-bottom: 5px;
+}
+
+.button_group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .ship_form {
