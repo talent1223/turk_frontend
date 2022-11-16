@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    
     <div class="content">
       <div class="left_div">
         <img
-          src="./sample image files.jpg"
+          src=<?php echo "./images/" . $_GET["image"] . ".jpg" ?>
           alt="image"
           class="image"
           id="image"
@@ -24,6 +25,14 @@
       </div>
 
       <div class="right_div">
+        <button
+          type="button"
+          class="btn btn-primary btn-sm rotate_button"
+          onclick="rotate()"
+        >
+          Rotate Image
+        </button>
+
         <div class="form">
           <label class="form-label ship_form">Ship Form</label>
           <div class="form_row">
@@ -32,6 +41,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_from_name"
             />
           </div>
 
@@ -41,6 +51,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_from_address1"
             />
           </div>
 
@@ -50,6 +61,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_from_address2"
             />
           </div>
 
@@ -59,6 +71,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_from_city"
             />
           </div>
 
@@ -68,6 +81,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_from_state"
             />
           </div>
 
@@ -77,6 +91,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_from_zip"
             />
           </div>
         </div>
@@ -88,6 +103,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_to_name"
             />
           </div>
 
@@ -97,6 +113,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_to_address1"
             />
           </div>
 
@@ -106,6 +123,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_to_address2"
             />
           </div>
 
@@ -115,6 +133,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_to_city"
             />
           </div>
 
@@ -124,6 +143,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_to_state"
             />
           </div>
 
@@ -133,6 +153,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="ship_to_zip"
             />
           </div>
         </div>
@@ -144,6 +165,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="return_address_name"
             />
           </div>
 
@@ -153,6 +175,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="return_address_address1"
             />
           </div>
 
@@ -162,6 +185,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="return_address_address2"
             />
           </div>
 
@@ -171,6 +195,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="return_address_city"
             />
           </div>
 
@@ -180,6 +205,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="return_address_state"
             />
           </div>
 
@@ -189,6 +215,7 @@
               class="form-control form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="return_address_zip"
             />
           </div>
         </div>
@@ -196,122 +223,53 @@
           <label class="form-label ship_form"
             >Flat Rate and Predefined options</label
           >
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label">Flat</label>
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-          </div>
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label"
-              >Padded Bubble Mailer</label
+
+          <div class="select_form">
+            <select
+              class="form-select form-select-sm flat_box"
+              aria-label=".form-select-sm example "
+              id="flat_rate"
             >
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-          </div>
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label">Parcel</label>
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-          </div>
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label">Flat Rate Envelope</label>
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-          </div>
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label"
-              >Flat Rate Legal Envelope</label
-            >
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-          </div>
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label"
-              >Flat Rate Padded Padded Envelope</label
-            >
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-          </div>
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label"
-              >Small Flat Rate Box</label
-            >
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-          </div>
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label"
-              >Medium Flat Rate Box</label
-            >
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-          </div>
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label"
-              >Large Flat Rate Box</label
-            >
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-          </div>
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label"
-              >Regional Rate Box A</label
-            >
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-          </div>
-          <div class="form_row flat_rate_form">
-            <label class="form-label flat_form_label"
-              >Regional Rate Box B</label
-            >
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
+              <option value="0" selected>Flat</option>
+              <option value="1">Padded Bubble Mailer</option>
+              <option value="2">Parcel</option>
+              <option value="3">Flat Rate Envelope</option>
+              <option value="4">Flat Rate Legal Envelope</option>
+              <option value="5">Flat Rate Padded Envelope</option>
+              <option value="6">Small Flat Rate Box</option>
+              <option value="7">Medium Flat Rate Box</option>
+              <option value="8">Large Flat Rate Box</option>
+              <option value="9">Regional Rate Box A</option>
+              <option value="10">Regional Rate Box B</option>
+            </select>
           </div>
         </div>
+
+        <div class="form">
+          <label class="form-label ship_form"
+            >Service</label
+          >
+
+          <div class="select_form">
+            <select
+              class="form-select form-select-sm flat_box"
+              aria-label=".form-select-sm example "
+              id="service"
+            >
+              <option value="0" selected>USPS First Class</option>
+              <option value="1">USPS Priority Mail 3 days</option>
+              <option value="2">USPS Parcel Select 3-7 days</option>
+              <option value="3">USPS Priority Express 1 day</option>
+              <option value="4">UPS Ground</option>
+              <option value="5">UPS 3 Day Select</option>
+              <option value="6">UPS 2day Air</option>
+              <option value="7">UPS Next Day Saver</option>
+              <option value="8">UPS Next Day Air</option>
+              <option value="9">UPS Next Dar Air Early AM</option>
+            </select>
+          </div>
+        </div>
+
         <div class="form">
           <label class="form-label ship_form">Weight</label>
           <div class="form_row weight_form_item">
@@ -320,6 +278,7 @@
               class="form-control weight_form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="weight_ibs"
             />
           </div>
           <div class="form_row weight_form_item">
@@ -328,6 +287,7 @@
               class="form-control weight_form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="weight_oz"
             />
           </div>
         </div>
@@ -338,29 +298,25 @@
               class="form-control dimension_form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="dimension_x"
             />
             *
             <input
               class="form-control dimension_form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="dimension_y"
             />
             *
             <input
               class="form-control dimension_form_input"
               type="text"
               aria-label=".form-control-sm example"
+              id="dimension_z"
             />
           </div>
         </div>
         <div class="form button_group">
-          <button
-            type="button"
-            class="btn btn-primary btn-sm"
-            onclick="rotate()"
-          >
-            Rotate Image
-          </button>
           <button
             type="button"
             class="btn btn-primary btn-sm"
