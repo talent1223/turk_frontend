@@ -230,17 +230,18 @@
               aria-label=".form-select-sm example "
               id="flat_rate"
             >
-              <option value="0" selected>Flat</option>
-              <option value="1">Padded Bubble Mailer</option>
-              <option value="2">Parcel</option>
-              <option value="3">Flat Rate Envelope</option>
-              <option value="4">Flat Rate Legal Envelope</option>
-              <option value="5">Flat Rate Padded Envelope</option>
-              <option value="6">Small Flat Rate Box</option>
-              <option value="7">Medium Flat Rate Box</option>
-              <option value="8">Large Flat Rate Box</option>
-              <option value="9">Regional Rate Box A</option>
-              <option value="10">Regional Rate Box B</option>
+              <option value="0" selected></option>
+              <option value="1">Flat</option>
+              <option value="2">Padded Bubble Mailer</option>
+              <option value="3">Parcel</option>
+              <option value="4">Flat Rate Envelope</option>
+              <option value="5">Flat Rate Legal Envelope</option>
+              <option value="6">Flat Rate Padded Envelope</option>
+              <option value="7">Small Flat Rate Box</option>
+              <option value="8">Medium Flat Rate Box</option>
+              <option value="9">Large Flat Rate Box</option>
+              <option value="10">Regional Rate Box A</option>
+              <option value="11">Regional Rate Box B</option>
             </select>
           </div>
         </div>
@@ -256,16 +257,17 @@
               aria-label=".form-select-sm example "
               id="service"
             >
-              <option value="0" selected>USPS First Class</option>
-              <option value="1">USPS Priority Mail 3 days</option>
-              <option value="2">USPS Parcel Select 3-7 days</option>
-              <option value="3">USPS Priority Express 1 day</option>
-              <option value="4">UPS Ground</option>
-              <option value="5">UPS 3 Day Select</option>
-              <option value="6">UPS 2day Air</option>
-              <option value="7">UPS Next Day Saver</option>
-              <option value="8">UPS Next Day Air</option>
-              <option value="9">UPS Next Dar Air Early AM</option>
+              <option value="0" selected></option>
+              <option value="1">USPS First Class</option>
+              <option value="2">USPS Priority Mail 3 days</option>
+              <option value="3">USPS Parcel Select 3-7 days</option>
+              <option value="4">USPS Priority Express 1 day</option>
+              <option value="5">UPS Ground</option>
+              <option value="6">UPS 3 Day Select</option>
+              <option value="7">UPS 2day Air</option>
+              <option value="8">UPS Next Day Saver</option>
+              <option value="9">UPS Next Day Air</option>
+              <option value="10">UPS Next Dar Air Early AM</option>
             </select>
           </div>
         </div>
@@ -273,7 +275,7 @@
         <div class="form">
           <label class="form-label ship_form">Weight</label>
           <div class="form_row weight_form_item">
-            <label class="form-label weight_form_label">Ibs.: </label>
+            <label class="form-label weight_form_label">ibs.: </label>
             <input
               class="form-control weight_form_input"
               type="text"
