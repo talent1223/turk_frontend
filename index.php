@@ -11,6 +11,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="autocomplete/jquery.auto-complete.css" />
+    
   </head>
   <body>
     
@@ -34,7 +38,7 @@
         </button>
 
         <div class="form">
-          <label class="form-label ship_form">Ship Form</label>
+          <label class="form-label ship_form">Ship From</label>
           <div class="form_row">
             <label class="form-label flat_form_label">Name</label>
             <input
@@ -95,66 +99,79 @@
             />
           </div>
         </div>
+
         <div class="form">
           <label class="form-label ship_form">Ship To</label>
           <div class="form_row">
             <label class="form-label flat_form_label">Name</label>
-            <input
-              class="form-control form_input"
-              type="text"
-              aria-label=".form-control-sm example"
-              id="ship_to_name"
-            />
+            <div class="autocomplete" style="width: 200px">
+              <input
+                class="form-control ship_to_input"
+                type="text"
+                aria-label=".form-control-sm example"
+                id="ship_to_name"
+              />
+            </div>
           </div>
 
           <div class="form_row">
             <label class="form-label flat_form_label">Address Line 1</label>
-            <input
-              class="form-control form_input"
-              type="text"
-              aria-label=".form-control-sm example"
-              id="ship_to_address1"
-            />
+            <div class="autocomplete" style="width: 200px">
+              <input
+                class="form-control ship_to_input"
+                type="text"
+                aria-label=".form-control-sm example"
+                id="ship_to_address1"
+              />
+            </div>
           </div>
 
           <div class="form_row">
             <label class="form-label flat_form_label">Address Line 2</label>
-            <input
-              class="form-control form_input"
-              type="text"
-              aria-label=".form-control-sm example"
-              id="ship_to_address2"
-            />
+            <div class="autocomplete" style="width: 200px">
+              <input
+                class="form-control ship_to_input"
+                type="text"
+                aria-label=".form-control-sm example"
+                id="ship_to_address2"
+              />
+            </div>
           </div>
 
           <div class="form_row">
             <label class="form-label flat_form_label">City</label>
-            <input
-              class="form-control form_input"
-              type="text"
-              aria-label=".form-control-sm example"
-              id="ship_to_city"
-            />
+            <div class="autocomplete" style="width: 200px">
+              <input
+                class="form-control ship_to_input"
+                type="text"
+                aria-label=".form-control-sm example"
+                id="ship_to_city"
+              />
+            </div>
           </div>
 
           <div class="form_row">
             <label class="form-label flat_form_label">State</label>
-            <input
-              class="form-control form_input"
-              type="text"
-              aria-label=".form-control-sm example"
-              id="ship_to_state"
-            />
+            <div class="autocomplete" style="width: 200px">
+              <input
+                class="form-control ship_to_input"
+                type="text"
+                aria-label=".form-control-sm example"
+                id="ship_to_state"
+              />
+            </div>
           </div>
 
           <div class="form_row">
             <label class="form-label flat_form_label">Zip</label>
-            <input
-              class="form-control form_input"
-              type="text"
-              aria-label=".form-control-sm example"
-              id="ship_to_zip"
-            />
+            <div class="autocomplete" style="width: 200px">
+              <input
+                class="form-control ship_to_input"
+                type="text"
+                aria-label=".form-control-sm example"
+                id="ship_to_zip"
+              />
+            </div>
           </div>
         </div>
         <div class="form">
@@ -246,31 +263,7 @@
           </div>
         </div>
 
-        <div class="form">
-          <label class="form-label ship_form"
-            >Service</label
-          >
-
-          <div class="select_form">
-            <select
-              class="form-select form-select-sm flat_box"
-              aria-label=".form-select-sm example "
-              id="service"
-            >
-              <option value="0" selected></option>
-              <option value="1">USPS First Class</option>
-              <option value="2">USPS Priority Mail 3 days</option>
-              <option value="3">USPS Parcel Select 3-7 days</option>
-              <option value="4">USPS Priority Express 1 day</option>
-              <option value="5">UPS Ground</option>
-              <option value="6">UPS 3 Day Select</option>
-              <option value="7">UPS 2day Air</option>
-              <option value="8">UPS Next Day Saver</option>
-              <option value="9">UPS Next Day Air</option>
-              <option value="10">UPS Next Dar Air Early AM</option>
-            </select>
-          </div>
-        </div>
+        
 
         <div class="form">
           <label class="form-label ship_form">Weight</label>
@@ -318,6 +311,33 @@
             />
           </div>
         </div>
+
+        <div class="form">
+          <label class="form-label ship_form"
+            >Service</label
+          >
+
+          <div class="select_form">
+            <select
+              class="form-select form-select-sm flat_box"
+              aria-label=".form-select-sm example "
+              id="service"
+            >
+              <option value="0" selected></option>
+              <option value="1">USPS First Class</option>
+              <option value="2">USPS Priority Mail 3 days</option>
+              <option value="3">USPS Parcel Select 3-7 days</option>
+              <option value="4">USPS Priority Express 1 day</option>
+              <option value="5">UPS Ground</option>
+              <option value="6">UPS 3 Day Select</option>
+              <option value="7">UPS 2day Air</option>
+              <option value="8">UPS Next Day Saver</option>
+              <option value="9">UPS Next Day Air</option>
+              <option value="10">UPS Next Dar Air Early AM</option>
+            </select>
+          </div>
+        </div>
+        
         <div class="form button_group">
           <button
             type="button"
@@ -335,6 +355,14 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script src="javascript.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="jquery.autocompleter.js"></script> -->
+    <script src="autocomplete/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+
+
+    
+    
   </body>
 </html>
